@@ -1,0 +1,14 @@
+.btn-load-book,
+
+.btn-load-book:active,
+.btn-load-book:focus,
+.btn-load-book:focus-visible,
+.btn-load-book.show{
+    all: unset;
+     background-color: transparent  !important;
+  border: none !important;                  
+  box-shadow: none !important;             
+  color: var(--orange) !important;               
+  cursor: pointer;
+}
+

@@ -1,0 +1,24 @@
+.icon-nav {
+  width: 24px;
+  height: 24px;
+background-color: none;
+  fill: var(--orange);
+  stroke: var(--blue);
+}
+
+.dropdown-toggle,
+.dropdown-toggle:hover,
+.dropdown-toggle:focus,
+.dropdown-toggle:active,
+.dropdown-toggle:focus-visible,
+.dropdown-toggle.show {
+  all: unset;              
+  background-color: transparent !important;
+  border: none !important;                  
+  box-shadow: none !important;             
+  color: inherit !important;               
+  cursor: pointer;
+}
+
+
+

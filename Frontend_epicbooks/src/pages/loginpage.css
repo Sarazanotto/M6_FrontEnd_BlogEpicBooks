@@ -1,0 +1,27 @@
+.btn-oauth, .btn-oauth:hover, .btn-oauth:focus, .btn-oauth:active, .btn-oauth:disabled{
+    
+    background-color: transparent !important;
+    border-color: transparent !important;
+box-shadow: none !important;
+}
+
+.btn-oauth img{
+    width: 90px;
+}
+
+.btn-register{
+    color: black;
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+   
+}
+.btn-register:hover{
+    color: var(--orange);
+}
+.btn-accedi, .btn-accedi:hover, .btn-accedi:focus, .btn-accedi:active, .btn-accedi:disabled {
+    color: #fff;
+    background-color: var(--orange);
+    border-color: transparent !important;
+    box-shadow: none !important;
+}

@@ -1,7 +1,10 @@
 .container-links{
     border-bottom: 1px solid var(--blue) ;
 }
-
-.nav-link:hover{
+.nav-link{
     color: var(--blue);
+    font-weight: 400;
+}
+.nav-link:hover{
+    color: var(--orange);
 }

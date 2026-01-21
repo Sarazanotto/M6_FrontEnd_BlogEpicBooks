@@ -18,15 +18,15 @@ const MobileNav = () => {
         </svg>
       </Dropdown.Toggle>
       <Dropdown.Menu>
-        <Dropdown.Item>
-          <Link to="/" className="nav-link">
+        <Dropdown.Item as={Link} to="/" className="nav-link" >
+          
             Chi sono
-          </Link>
+
         </Dropdown.Item>
-        <Dropdown.Item>
-          <Link to="/" className="nav-link">
+        <Dropdown.Item as={Link} to="/" className="nav-link">
+      
             Contatti
-          </Link>
+          
         </Dropdown.Item>
       </Dropdown.Menu>
     </Dropdown>

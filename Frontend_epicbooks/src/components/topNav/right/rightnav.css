@@ -8,7 +8,26 @@
      background-color: transparent  !important;
   border: none !important;                  
   box-shadow: none !important;             
-  color: var(--orange) !important;               
+  color: var(--blue) !important;               
   cursor: pointer;
+  font-weight: 600;
 }
 
+
+.btn-submit:hover{
+  background-color: var(--orange);
+}
+.btn-submit:active,
+.btn-submit:focus,
+.btn-submit:focus-visible,
+.btn-submit.show,
+.btn-submit{
+  all: unset;
+  background-color: var(--orange) !important;
+  border-radius: 5px;
+  box-shadow: none !important;
+  cursor: pointer;
+  padding: 5px 10px;
+  margin-top: 15px;
+  
+}

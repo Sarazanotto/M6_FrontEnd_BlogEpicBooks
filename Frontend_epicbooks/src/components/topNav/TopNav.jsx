@@ -9,7 +9,7 @@ const TopNav = () => {
     <Container className="container-links ">
       <Row className="d-flex align-items-center">
         <Col xs={6} className="d-flex gap-5">
-          <Link to="/" className="nav-link">
+          <Link to="/homepage" className="nav-link">
             Home
           </Link>
           <LinksNav />

@@ -1,0 +1,23 @@
+.form-registration{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+padding: 20px;
+}
+
+.form-label{
+    font-size: small;
+    margin: 0;
+    color: rgba(0, 0, 0, 0.6);
+}
+.form-control::placeholder, .p-inputtext::placeholder{
+color: rgba(0, 0, 0, 0.4)
+}
+
+.p-dialog-header{
+    padding: 0 auto;
+}
+
+.error-registration{
+height: 20px;
+}

@@ -15,6 +15,8 @@ const LinksNav = () => {
           <Link to="/" className="nav-link">
             Contatti
           </Link>
+          <Link to="/modifyUser" className="nav-link">Il tuo profilo</Link>
+          <Link to="/loginPage" className="nav-link">Esci</Link>
         </Col>
       </Row>
     </Container>

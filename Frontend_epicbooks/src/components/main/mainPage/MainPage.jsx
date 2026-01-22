@@ -59,6 +59,7 @@ const MainPage = () => {
         {books.slice(0, visibleBook).map((book) => (
           <SingleBook
             key={book._id}
+            id={book._id}
             title={book.title}
             alt={book.title}
             img={book.cover}

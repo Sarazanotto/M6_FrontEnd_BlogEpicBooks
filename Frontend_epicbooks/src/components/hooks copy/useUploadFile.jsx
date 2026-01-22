@@ -6,6 +6,7 @@ export const useUploadFile = (url) => {
   const [error, setError] = useState(null);
 
   const onChangeFile = (e) => {
+    setError(null)
     setFile(e.target.files[0]);
   };
 
@@ -23,12 +24,14 @@ export const useUploadFile = (url) => {
         body: fileData,
       });
       const data = await res.json();
-      setLoading(false);
+      
       return data;
     } catch (error) {
       setError(error);
       setLoading(false);
       console.error(error);
+    }finally{
+      setLoading(false)
     }
   };
   return { file, onChangeFile, uploadFile, loading, error };

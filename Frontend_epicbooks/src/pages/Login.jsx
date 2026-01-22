@@ -107,11 +107,11 @@ const Login = () => {
             </p>
             <Col className="d-flex gap-2 justify-content-center">
               <Button className="btn-oauth" onClick={onClickGoogle}>
-                <img src={Insta} />
+                <img src={Google} />
               </Button>
 
               <Button className="btn-oauth" onClick={onClickInstagram}>
-                <img src={Google} />
+                <img src={Insta} />
               </Button>
             </Col>
           </Row>

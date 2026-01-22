@@ -4,7 +4,8 @@ import { Button, Col, Container, Form, Row } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import "./loginpage.css";
 import ModalRegisterUser from "../components/loginPage/ModalRegisterUser";
-
+import Google from "../../assets/google.png"
+import Insta from "../../assets/insta.png"
 const Login = () => {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({ email: "", password: "" });
@@ -106,11 +107,11 @@ const Login = () => {
             </p>
             <Col className="d-flex gap-2 justify-content-center">
               <Button className="btn-oauth" onClick={onClickGoogle}>
-                <img src="../../assets/google.png" />
+                <img src={Insta} />
               </Button>
 
               <Button className="btn-oauth" onClick={onClickInstagram}>
-                <img src="../../assets/insta.png" />
+                <img src={Google} />
               </Button>
             </Col>
           </Row>

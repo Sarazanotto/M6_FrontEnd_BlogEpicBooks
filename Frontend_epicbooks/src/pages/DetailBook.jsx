@@ -5,6 +5,7 @@ import { useState } from "react";
 import { useParams } from "react-router-dom";
 import DetailBookSingle from "../components/main/mainPage/DetailBookSingle";
 import CommentsUser from "../components/main/mainPage/singleBook/CommentsUser";
+import TopNav from "../components/topNav/TopNav";
 const DetailBook = () => {
   const [book, setBook] = useState();
   const [loading, setLoading] = useState(false);
@@ -57,6 +58,8 @@ useEffect(()=>{
     allComments();
   }, [book]);
   return (
+    <>
+    <TopNav/>
     <Container className="p-5">
       <Row className="flex-column justify-content-center align-items-center gap-3">
         {book && 
@@ -80,6 +83,7 @@ useEffect(()=>{
         
       </Row>
     </Container>
+    </>
   );
 };
 

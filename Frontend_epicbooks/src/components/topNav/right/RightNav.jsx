@@ -6,16 +6,16 @@ import { useBookForm } from "./hooks/useBookForm";
 
 const RightNav = () => {
   const [show, setShow] = useState(false);
- 
+
   const { file, onChangeFile, uploadFile, loading, error } = useUploadFile(
-    `${import.meta.env.VITE_SERVER_URL}/books/upload`
+    `${import.meta.env.VITE_SERVER_URL}/books/upload`,
   );
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const { onChange, onSubmit } = useBookForm(
     `${import.meta.env.VITE_SERVER_URL}/books`,
     uploadFile,
-    handleClose
+    handleClose,
   );
 
   return (
@@ -53,6 +53,16 @@ const RightNav = () => {
               />
             </Form.Group>
             <Form.Group>
+              <Form.Label>Prezzo</Form.Label>
+              <Form.Control
+                type="text"
+                placeholder="Inserisci il prezzo"
+                onChange={onChange}
+                name="price"
+              />
+            </Form.Group>
+
+            <Form.Group>
               <Form.Label>Copertina</Form.Label>
               <Form.Control type="file" onChange={onChangeFile} name="cover" />
               {loading && <small>...in caricamento</small>}
@@ -78,7 +88,9 @@ const RightNav = () => {
               <Form.Control type="text" onChange={onChange} name="content" />
             </Form.Group>
 
-            <Button type="submit"className="btn-submit">Invia</Button>
+            <Button type="submit" className="btn-submit">
+              Invia
+            </Button>
           </Form>
         </Modal.Body>
       </Modal>

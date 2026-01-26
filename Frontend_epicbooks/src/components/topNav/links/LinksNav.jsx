@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const LinksNav = () => {
   return (
-    <Container className="d-none d-md-block">
+    <Container className="d-none d-lg-block">
       <Row>
         <Col className="d-flex gap-5 pb-3">
         

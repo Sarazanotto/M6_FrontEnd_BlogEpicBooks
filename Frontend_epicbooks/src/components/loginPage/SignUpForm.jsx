@@ -16,7 +16,7 @@ const SignUpForm = () => {
   });
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
-  const navigate = useNavigate();
+  const [success,setSuccess]= useState(true)
   const onChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
@@ -32,14 +32,14 @@ const SignUpForm = () => {
     try {
       const res = await fetch(`${import.meta.env.VITE_SERVER_URL}/authors`, {
         method: "POST",
-        headers: { "content-Type": "application/json" },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
       if (!res.ok) {
         throw new Error("Compila i campi");
       }
       await res.json();
-      navigate("/homepage");
+   setSuccess(true)
     } catch (error) {
       setError(error.message);
     } finally {
@@ -51,7 +51,9 @@ const SignUpForm = () => {
     <Container>
       <Row>
         <Col>
+       
           <Form className="form-registration p-0" onSubmit={onSubmit}>
+             {success && <CustomError variant='success' text='Registrazione completata! Puoi effettuare il login'/>}
             <div className="error-registration">
               {" "}
               {error && (

@@ -6,7 +6,7 @@ import "./mobilenav.css";
 
 const MobileNav = () => {
   return (
-    <Dropdown className="d-md-none">
+    <Dropdown className="d-lg-none">
       <Dropdown.Toggle as="div" className="mobile-toggle">
         <svg
           xmlns="http://www.w3.org/2000/svg"

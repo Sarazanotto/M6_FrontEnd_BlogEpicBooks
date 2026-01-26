@@ -40,6 +40,9 @@ const Login = () => {
         throw new Error("Login fallito");
       }
       const data = await res.json();
+      if(!data.token){
+        throw new Error('Token non ricevuto')
+      }
       localStorage.setItem("jwtToken", data.token);
       navigate("/homepage");
     } catch (error) {
